@@ -1,0 +1,147 @@
+.calendar-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #f5f5f5;
+}
+
+.day-cell {
+    min-height: 100px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.day-cell:hover {
+    background-color: #f8f9fa;
+}
+
+.day-cell.empty {
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.schedule-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.schedule-indicator {
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.priority-high {
+    background-color: #fee2e2;
+}
+
+.priority-medium {
+    background-color: #fef3c7;
+}
+
+.priority-low {
+    background-color: #d1fae5;
+}
+
+.schedule-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 300px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.schedule-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.schedule-time {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.schedule-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.schedule-description {
+    font-size: 14px;
+    color: #666;
+}
