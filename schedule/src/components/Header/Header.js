@@ -2,9 +2,12 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
-    <header className="header">
-        <h1>Schedule Manager</h1>
-    </header>
+    return (
+        <div className="header">
+            <h1>Schedule App</h1>
+            <p>Organize your time efficiently</p>
+        </div>
+    );
 };
 
 export default Header;
